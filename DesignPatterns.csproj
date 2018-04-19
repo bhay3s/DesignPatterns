@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9D25F50E-FF08-43AD-96D3-4819F9250446}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DesignPatterns.Structural.Proxy.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behavioral\Chain Of Responsibility\LinkBase.cs" />
+    <Compile Include="Behavioral\Chain Of Responsibility\ConcreteLink1.cs" />
+    <Compile Include="Behavioral\Chain Of Responsibility\ConcreteLink3.cs" />
+    <Compile Include="Behavioral\Chain Of Responsibility\ConcreteLink2.cs" />
+    <Compile Include="Behavioral\Chain Of Responsibility\DataType.cs" />
+    <Compile Include="Behavioral\Chain Of Responsibility\Program.cs" />
+    <Compile Include="Behavioral\Command\CommandBase.cs" />
+    <Compile Include="Behavioral\Command\DoOtherWorkCommand.cs" />
+    <Compile Include="Behavioral\Command\DoWorkCommand.cs" />
+    <Compile Include="Behavioral\Command\DoYetOtherWorkCommand.cs" />
+    <Compile Include="Behavioral\Command\Invoker.cs" />
+    <Compile Include="Behavioral\Command\Program.cs" />
+    <Compile Include="Behavioral\Command\Reciever.cs" />
+    <Compile Include="Behavioral\Interpreter\Program.cs" />
+    <Compile Include="Behavioral\Iterator\Program.cs" />
+    <Compile Include="Behavioral\Mediator\Program.cs" />
+    <Compile Include="Behavioral\Memento\MultiChangeCustomer.cs" />
+    <Compile Include="Behavioral\Memento\SimpleCustomer.cs" />
+    <Compile Include="Behavioral\Memento\Program.cs" />
+    <Compile Include="Behavioral\Observer\Generic\Observer.cs" />
+    <Compile Include="Behavioral\Observer\Generic\Publisher.cs" />
+    <Compile Include="Behavioral\Observer\Generic\Program.cs" />
+    <Compile Include="Behavioral\Observer\Generic\Unsubscriber.cs" />
+    <Compile Include="Behavioral\Observer\Unsubscriber.cs" />
+    <Compile Include="Behavioral\State\ConcreteState.cs" />
+    <Compile Include="Behavioral\State\Context.cs" />
+    <Compile Include="Behavioral\State\Program.cs" />
+    <Compile Include="Behavioral\Strategy\BubbleSort.cs" />
+    <Compile Include="Behavioral\Strategy\ISortable.cs" />
+    <Compile Include="Behavioral\Strategy\MergeSort.cs" />
+    <Compile Include="Behavioral\Strategy\Program.cs" />
+    <Compile Include="Behavioral\Strategy\QuickSort.cs" />
+    <Compile Include="Behavioral\Strategy\SortStrategyFactory.cs" />
+    <Compile Include="Behavioral\Template Method\Program.cs" />
+    <Compile Include="Behavioral\Visitor\Program.cs" />
+    <Compile Include="Creational\Abstract Factory\Program.cs" />
+    <Compile Include="Creational\Builder\Car.cs" />
+    <Compile Include="Creational\Builder\Program.cs" />
+    <Compile Include="Creational\Factory Method\Factory.cs" />
+    <Compile Include="Creational\Factory Method\Program.cs" />
+    <Compile Include="Creational\Prototype\Program.cs" />
+    <Compile Include="Creational\Prototype\ProtoCache.cs" />
+    <Compile Include="Creational\Prototype\types.cs" />
+    <Compile Include="Creational\Singleton\Program.cs" />
+    <Compile Include="Creational\Singleton\CsharpSingletonItem.cs" />
+    <Compile Include="Creational\Singleton\Singleton.cs" />
+    <Compile Include="Disposable.cs" />
+    <Compile Include="factory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Behavioral\Observer\LocationObserver.cs" />
+    <Compile Include="Behavioral\Observer\LocationPublisher.cs" />
+    <Compile Include="Behavioral\Observer\Program.cs" />
+    <Compile Include="Structural\Adapter\LegacyProducts.cs" />
+    <Compile Include="Structural\Adapter\LegacyProductsAdapter.cs" />
+    <Compile Include="Structural\Adapter\Program.cs" />
+    <Compile Include="Structural\Bridge\SmartTV.cs" />
+    <Compile Include="Structural\Bridge\VideoSources.cs" />
+    <Compile Include="Structural\Bridge\Program.cs" />
+    <Compile Include="Structural\Composite\Program.cs" />
+    <Compile Include="Structural\Decorator\Program.cs" />
+    <Compile Include="Structural\Facade\Program.cs" />
+    <Compile Include="Structural\Flyweight\Program.cs" />
+    <Compile Include="Structural\Proxy\IInterface.cs" />
+    <Compile Include="Structural\Proxy\Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Behavioral\Command\Generic\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Behavioral\Memento\ReadMe.txt" />
+    <Content Include="Behavioral\Observer\readme.txt" />
+    <Content Include="Structural\Adapter\ReadMe.txt" />
+    <Content Include="Structural\Bridge\ReadMe.txt" />
+    <Content Include="Structural\Facade\ReadMe.txt" />
+    <Content Include="Structural\Proxy\ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

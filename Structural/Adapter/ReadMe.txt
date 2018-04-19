@@ -1,0 +1,2 @@
+﻿The purpose of an Adapter Pattern is to solve the incompatibility issues between two interfaces (languages), 
+or we can say it's like a language converter concept, converting one language sentence to another
